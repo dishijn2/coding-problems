@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+int numTests = 0;
+cin >> numTests;
+int a = 0, b = 0, n = 0;
+for(int i = 0; i < numTests; ++i){
+cin >> a >> b >> n;
+if(n == 1) {
+cout << a << endl;
+continue;
+}
+if(n == 2) {
+cout << b << endl;
+continue;
+}
+int diff = b - a;
+int last = b;
+for(int j = 3; j <= n; ++j){
+last = last + diff;
+}
+cout << last << endl;
+}
+return 0;
+}
+
